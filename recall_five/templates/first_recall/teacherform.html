@@ -1,0 +1,16 @@
+{% extends 'first_recall/base.html' %}
+
+
+{% block body_block %}
+<h1> Please fill the form here</h1>
+<div class="jumbotron">
+ <form  method="post">
+
+
+{{ teacher_form.as_p }}
+{% csrf_token %}
+<input type="submit" class="btn btn-primary" value="submit">
+ </form>
+</div>
+
+{% endblock %}

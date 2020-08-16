@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends "first_recall/base.html" %}
+{% block body_block %}
+<h1> This is info </h1>
+<table border="10px black solid">
+  <tr>
+  <th>NAme</th>
+  <th>Email</th>
+  <th>Phone</th>
+</tr>
+  {% for i in Name %}
+  <tr>
+<td>{{i.Name | upper}}</td>
+<td>  {{i.Email | upper}}</td>
+<td> {{i.Mobile}}</td>
+</tr>
+
+{% endfor %}
+</table>
+
+{% endblock %}

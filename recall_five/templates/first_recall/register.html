@@ -1,0 +1,17 @@
+{% extends 'first_recall/base.html' %}
+{% block body_block %}
+<p>Hola this is registration page</p>
+{% if registered %}
+ <p>Thanks for Registering<p>
+{% else %}
+  <div class="jumbotron">
+    <form  enctype="multipart/form-data" method="post">
+      {% csrf_token %}
+      {{user_form.as_p}}
+      {{portfoilo_form.as_p}}
+      <input type="submit" valuue="signup">
+    </form>
+    </div>
+{% endif %}
+
+{% endblock %}
